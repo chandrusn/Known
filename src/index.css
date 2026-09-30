@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-known-bg: #0a0f1c;
+  --color-known-surface: #111827;
+  --color-known-border: rgba(255,255,255,0.08);
+  --color-known-text: #e6eaf2;
+  --color-known-muted: #8a94a7;
+  --color-known-accent: #5b8cff;
+  --color-known-critical: #f87171;
+  --color-known-high: #fb923c;
+  --color-known-medium: #facc15;
+  --color-known-low: #34d399;
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-known-bg);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at top, rgba(91, 140, 255, 0.12), transparent 30%),
+    var(--color-known-bg);
+  color: var(--color-known-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+::selection {
+  background: rgba(91, 140, 255, 0.35);
+  color: var(--color-known-text);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-known-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-known-border);
+  border-radius: 4px;
+}
